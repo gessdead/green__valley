@@ -29,7 +29,7 @@
       
       <!--choice date block-->
       <div class="date">
-        <p class="date__step"></p>
+        <p class="step">шаг 1</p>
         <h2 class="date__title"></h2>
         <div class="date__inner">
           <ul class="date__choice choice-block">
@@ -51,7 +51,7 @@
 
       <!--restplace block-->
       <div class="restplace">
-        <p class="step"></p>
+        <p class="step">шаг 2</p>
         <h2 class="restplace__title"></h2>
         <div class="restplace__inner">
           <ul class="restplace__list choice-block">
@@ -71,7 +71,7 @@
 
       <!--cottage type-->
       <div class="cottage">
-        <p class="step"></p>
+        <p class="step">шаг 3</p>
         <h2 class="cottage__title"></h2>
         <div class="cottage__inner"></div>
           <ul class="cottage__list">
@@ -133,11 +133,75 @@
             </li>
           </ul>
       </div>
-    
-        <!--payment-->
-        <div class="payment">
-          <
+      <!--personal information-->
+      <div class="personal-info">
+        <p class="step">шаг 4</p>
+        <h2 class="personal-info__title">Персональная информация</h2>
+        <div class="personal-info__form">
+          <div class="personal-info__form-inner">
+            <input type="text">
+          </div>
+          <div class="personal-info__form-inner">
+            <input type="text">
+          </div>
+          <div class="personal-info__form-inner">
+            <input type="number" name="phoneNumber">
+            <label for="phoneNumber">Мы свяжемся с вами в случае необходимости.</label>
+          </div>
+          <div class="personal-info__form-inner">
+            <input type="text">
+            <label for="email">На этот адрес мы вышлем вам подтверждение о забронированном номере.</label>
+          </div>
         </div>
+      </div>
+
+      <!-- payment info -->
+      <div class="payment">
+        <p class="step">шаг 5</p>
+        <h2 class="payment__title">Способ оплаты</h2>
+        <div class="payment__form">
+          <div class="type-of-payment">
+            <div class="payment-on-place">
+              <div class="payment-on-place__explanation">
+                <label for="payment-on-place">
+                  <input type="radio" name="type-of-payment">
+                  <span class="payment-on-place__choose">по приезду</span>
+                </label>
+              </div>
+            </div>
+            <div class="payment-online">
+              <div class="payment-online__explanation">
+                <label for="payment-online">
+                  <input type="radio" name="type-of-payment">
+                  <span class="payment-online__choose">сейчас</span>
+                </label>
+              </div>
+              <div class="payment-online__form">
+                <div class="payment-online__form-col1">
+                  <label for="cardNumber">номер карты</label>
+                  <input type="text" name="cardNumber" placeholder="0000 0000 0000 0000">
+                  <span class="personal-info__success"></span>
+                  <label for="ownerLastName">фамилия владельца карты</label>
+                  <input type="text" name="ownerLastName" placeholder="vladimir vladimirovich">
+                  <span class="personal-info__success"></span>
+                </div>
+                <div class="payment-online__form-col2">
+                  <label for="cvv">код cvv</label>
+                  <input type="number" name="cvv" placeholder="123">
+                  <span class="personal-info__success"></span>
+                  <label for="valid">действует до </label>
+                  <input type="text" name="valid" placeholder="01/2018">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sum-of-payment">
+            <p class="sum-for-payment__title">к оплате</p>
+            <p class="sum-for-payment__sum"></p>
+            <p class="sum-for-pyment__warning">Пожалуйста, <span class="dotted-underline">выберите дату</span> въезда и выезда чтобы увидеть сумму к оплате </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
