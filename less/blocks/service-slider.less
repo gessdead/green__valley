@@ -1,0 +1,64 @@
+.service-slider {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 55px;
+    background-image: url(file:///E:/epic_skills/green_valley//imgs/service-slider__bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @media (min-width: @screen-sm) {
+        width: @screen-sm;
+    }
+
+    @media (min-width: @screen-md) {
+        width: @screen-md;
+    }
+
+    &__list {
+        display: none;
+
+        @media (min-width: @screen-sm) {
+            display: inline-block;
+        }
+    }
+
+    &__title {
+        font-size: 26px;
+        line-height: normal;
+        font-family: @ptserifcap;
+        color: @textblack;
+        font-weight: normal;
+
+        @media (min-width: @screen-sm) {
+            font-size: 30px;
+        }
+    }
+
+    &__descr {
+        margin-bottom: 40px;
+        padding: 0px 10px 0px 10px;
+    }
+
+    &__item-li {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 18px;
+        font-family: @firasans;
+        font-weight: 300;
+        color: @textblack;
+        text-transform: uppercase;
+        font-weight: 500;
+        vertical-align: top;
+        width: 80px;
+        margin: 0 30px;
+        margin-bottom: 20px;
+        padding-top: 90px;
+        position: relative;
+    }
+}

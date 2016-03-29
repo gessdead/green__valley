@@ -1,0 +1,33 @@
+.main-nav{
+  @media (min-width: @screen-md) {
+    display: block;
+  }
+  &__list {
+    display:none;
+    list-style-type: none;
+    padding: 0px;
+
+    a {
+      color: @textblack;
+    }
+
+    a:hover {
+      color: @mainbtn;
+    }
+  
+  &__item {
+
+  }
+
+  @media (min-width: @screen-md){
+      display: flex;
+    }
+  }
+
+  &__menu-toggler {
+      display: inline-block;
+      @media (min-width: @screen-md){
+      display: none;
+    }
+  }
+}

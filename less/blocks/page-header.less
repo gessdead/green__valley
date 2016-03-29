@@ -1,0 +1,45 @@
+.page-header {
+      padding: 10px 0;
+      border-bottom: 1px solid #ebebeb;
+    &__inner {
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &__phone {
+        font-size: 18px;
+        line-height: 24px;
+        font-family: @ptsanscap;
+    }
+
+    &__btn {
+      display: none;
+
+      @media (min-width: @screen-md) {
+        display: block;
+      }
+    }
+
+    &__contacts {
+    display: none;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: @firasans;
+    font-weight: 300;
+    color: @textblack;
+
+      a {
+        color: @textblack;
+      }
+
+    @media (min-width: @screen-md) {
+      display: block;
+    }
+  }
+}

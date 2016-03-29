@@ -2,22 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 <body>
 
   <header class="page-header">
-    <div class="page-header__inner">
-      <a href="/" class="site-logo"><img src="" alt=""></a>
-      <nav class="main-nav">
-        <div class="main-nav__menu-toggler"></div>
+    <div class="page-header__inner row ">
+      <a href="/" class="site-logo col-xs-10 col-md-2"><img src="imgs/main-logo.png" alt="green_valley"></a>
+      <div class="main-nav__menu-toggler col-xs-2">
+        <a href="" class="menu-toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <nav class="main-nav col-md-4">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href=""></a></li>
+          <li class="main-nav__item"><a href="" class="link">номера</a></li>
+          <li class="main-nav__item"><a href="" class="link">коттедж</a></li>
+          <li class="main-nav__item"><a href="" class="link">ресторан</a></li>
+          <li class="main-nav__item"><a href="" class="link">отдых</a></li>
+          <li class="main-nav__item"><a href="" class="link">контакты</a></li>
         </ul>
       </nav>
-      <div class="short-contacts"><a href="tel:" class="shot-contacts__phone"></div>
+      <div class="page-header__contacts col-md-4">
+        <a href="tel:+78127775588" class="page-header__phone">+7 812 777-55-88</a>
+        <br>
+        г. Санкт-Петербург, Приморское ш. 600
+      </div>
       <div class="page-header__btn">
-        <a href="" class="btn  btn--icon-calendar"></a>
+        <a href="" class="btn btn--icon-calendar">
+          <i class="fa fa-calendar-o"></i>
+          забронировать
+        </a>
       </div>
     </div>
   </header>
@@ -25,23 +44,29 @@
   <div class="promo-slider">
     <div class="img-slider">
       <div class="img-slider__item">
-        <b lass="img-sllider__title"></b>
-        <p class="img-slider__text"></p>
+        <b lass="img-sllider__title">Семейный отдых на берегу Финского залива</b>
+        <p class="img-slider__text">Green Valley – это современная база отдыхав курортном районе для здорового отдыха всей семьёй</p>
       </div>
       <div class="img-slider__item">
-        <b lass="img-sllider__title"></b>
-        <p class="img-slider__text"></p>
+        <b lass="img-sllider__title">Корпоративный отдых на берегу Финского залива</b>
+        <p class="img-slider__text">Green Valley – это современная база отдыхав курортном районе для здорового отдыха всем коллективом</p>
       </div>
       <ul class="promo-slider__tabs">
-        <li class="promo-slider__tabs-item"></li>
-        <li class="promo-slider__tabs-item"></li>
+        <li class="promo-slider__tabs-item">семейный отдых</li>
+        <li class="promo-slider__tabs-item">корпоративный</li>
       </ul>
-      <div class="service-slider">
-        <section class="service-slider__item">
-          <h1 class="service-slider__title"></h1>
-          <p class="service-slider__descr"></p>
+      
+      <div class="service-slider row">
+        <section class="service-slider__item col-md-offset-1 col-md-10">
+          <h1 class="service-slider__title">Здоровый отдых</h1>
+          <p class="service-slider__descr col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">Плавайте в бассейне, играйте в волейбол, футбол и другие игры. Устройте семейный пикник с шашлыками или снимите напряжение в бане или спа. Почуствуйте отдых!</p>
           <ul class="service-slider__list">
-            <li class="service-slider__item-li"></li>
+            <li class="service-slider__item-li">бассейн</li>
+            <li class="service-slider__item-li">спортивная площадка</li>
+            <li class="service-slider__item-li">бильярд</li>
+            <li class="service-slider__item-li">спа</li>
+            <li class="service-slider__item-li">бани</li>
+            <li class="service-slider__item-li">анимамция</li>
           </ul>
         </section>
       </div>
@@ -79,40 +104,39 @@
           <img src="#" class="gallery__small-img">
         </a>
       </li>
-
     </ul>
   </div>
 
   <section class="reviews">
-      <div class="rewiews__inner">
-        <h2 class="rewiews__header"></h2>
-        <div class="rewiews__slider">
-      <ul class="rewiews__list">
-        <li class="rewiews__item">
-          <div class="rewiews__item-title">
-            <div class="rewiews__item-title-img"></div>
+    <div class="reviews__inner">
+      <h2 class="reviews__header">отзывы</h2>
+      <div class="reviews__slider">
+      <ul class="reviews__list">
+        <li class="reviews__item">
+          <div class="reviews__item-title">
+            <div class="reviews__item-title-img">Екатерина В.</div>
           </div>
-          <div class="rewiews__item-text">
-            <p class="rewiews__item-text-main"></p>
-            <p class="rewiews__item-text-date"></p>
+          <div class="reviews__item-text">
+            <blockquote class="reviews__item-text-main">Путешествую очень много. Здесь, как говорится цена равна качеству. Комната всегда чистая, каждый день убираются. Можно выбрать вид из окна твоей комнаты, да-да есть и такое.
+              <p class="reviews__item-text-date">Дата отдыха:<br>07.03.2015 - 16.03.2015</p>
+            </blockquote>
           </div>
         </li>
-       </ul>
-      <ul class="rewiews__list">
-        <li class="rewiews__item">
-          <div class="rewiews__item-title">
-            <div class="rewiews__item-title-img"></div>
+        <li class="reviews__item">
+          <div class="reviews__item-title">
+            <div class="reviews__item-title-img"></div>
           </div>
-          <div class="rewiews__item-text">
-            <p class="rewiews__item-text-main"></p>
-            <p class="rewiews__item-text-date"></p>
+          <div class="reviews__item-text">
+            <blockquote class="reviews__item-text-main">Путешествую очень много. Здесь, как говорится цена равна качеству. Комната всегда чистая, каждый день убираются. Можно выбрать вид из окна твоей комнаты, да-да есть и такое.
+              <p class="reviews__item-text-date">Дата отдыха:<br>07.03.2015 - 16.03.2015</p>
+            </blockquote>
           </div>
         </li>
       </ul>
-          <a href="#" class="rewiews__btn"></a>
-        </div>
+      <a href="#" class="btn reviews__btn">все отзывы</a>
       </div>
-    </section>
+    </div>
+  </section>
 
     <section class="sale-slider">
     <h2 class="sale-slider__title"></h2>
@@ -145,34 +169,40 @@
     <section class="location">
       <b class="location__title"></b>
       <div class="location__inner">
-        <iframe src="#" class="location__map"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1043.3817404989545!2d29.639441473423922!3d60.19195701968106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469655a8f3af85e1%3A0x73d49700f555aa7e!2z0J_RgNC40LzQvtGA0YHQutC-0LUg0YguLCA1OTgsIFVzaGtvdm8sIGcuIFNhbmt0LVBldGVyYnVyZywgMTk5MDA0!5e0!3m2!1sen!2sru!4v1447771316946" frameborder="0" style="border:0" allowfullscreen=""></iframe>
         <div class="location__route">
           <img src="#" class="location__route-icon">
-          <b class="location__route-title"></b>
-          <p class="location__route-text"></p>
-          <p class="location__route-text"></p>
-          <p class="location__route-text"></p>
-          <p class="location__route-text"></p>
+          <b class="location__route-title">автобусы</b>
+          <p class="location__route-text">
+            <span class="bold">№ 211</span> от станции метро "Черная речка" до остановки "Санатроий Репино"
+          </p>
+          <p class="location__route-text">
+            <span class="bold">№ 305К</span> от станции метро "Старая деревня"
+          </p>
+          <p class="location__route-text">
+            <span class="bold">№ 680К</span> от станции метро "Проспект Просвещения"
+          </p>
+          <p class="location__route-text">
+            <span class="bold">№ 400К</span> от станции метро "Площадь Ленина"
+          </p>
           <img src="#" class="location__route-icon">
-          <b class="location__route-title"></b>
-          <p class="location__route-text"></p>
-          <p class="location__route-text"></p>
-          <p class="location__route-text"></p>
-          <p class="location__route-text"></p>
+          <b class="location__route-title">электропоезд</b>
+          <p class="location__route-text">Электропоезд Выборгского направления от Финляндского вокзала Санкт-Петербурга до платформы «Репино»
+          </p>
         </div>
       </div>
     </section>
 
   <section class="rest-place">
     <div class="rest-place__inner">
-      <b class="rest-place__title"></b>
+      <h2 class="rest-place__title">Где вы хотите отдохнуть?</h2>
       <a href="#">
         <div class="rest-place__cart">
           <div class="rest-place__photo"><img src="" class="rest-place__img">
           </div>
           <div class="rest-place__info">
-            <b class="rest-place__text"></b>
-            <p class="rest-place__price"></p>
+            <h2 class="rest-place__text">В отеле</h2>
+            <p class="price">от <b>4000</b> руб./сутки</p>
           </div>
         </div>
       </a>
@@ -181,8 +211,8 @@
           <div class="rest-place__photo"><img src="" class="rest-place__img">
           </div>
           <div class="rest-place__info">
-            <b class="rest-place__text"></b>
-            <p class="rest-place__price"></p>
+            <b class="rest-place__text">В коттедже</b>
+            <p class="price">от <b>6800</b> руб./сутки</p>
           </div>
         </div>
       </a>
@@ -191,7 +221,7 @@
 
   <footer class="page-footer">
     <div class="page-footer__inner">
-      <p class="page-footer__adress"></p>
+      <p class="page-footer__adress">г. Санкт-Петербург<br>Приморское ш. 600</p>
     <div class="page-footer__logo">
       <a href="/" class="site-logo"><img src="" alt=""></a>
       <ul class="social-icon__list">
@@ -200,7 +230,9 @@
         <li class="social-icon__item"><a href=""><img src=""></a></li>
       </ul>
     </div>
-      <p class="page-footer__contact"></p>
+      <p class="page-footer__contact">
+        <a href="tel:+78127775588">+7 812 777-55-88<br><a href="mailto:info@greenvalley.ru">info@greenvalley.ru</a>
+      </p>
     </div>
   </footer>
 </body>

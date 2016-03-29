@@ -1,0 +1,57 @@
+.btn {
+  font-size: 14px;
+  font-family: @firasans;
+  line-height: @btnlh;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0;
+  background-image: none;
+  text-decoration: none;
+  background-color:@mainbtn;
+  padding: 10px 30px;
+  border-radius: 70px;
+  display: inline-block;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: ease-in-out all 400ms;
+  text-transform: uppercase;
+
+    &:hover {
+      background-color: @mainbtndrkn;
+      text-decoration: none;
+      color: #fff;
+    }
+}
+
+.btn--icon-calendar {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    i {
+      margin-right: 10px;
+    }
+}
+.reviews__btn {
+    background-color: @secondbtn;
+    border: 2px solid #fff;
+    padding: 8px 28px;
+
+    &:hover {
+      color: @secondbtn;
+      background-color: #fff;
+    }
+}
+
+.details__btn {
+  background: none !important;
+  padding: 0;
+  border-radius: 0;
+  color: @textblack;
+  &:hover {
+    border-bottom: 1px dashed @textblack;
+    background: none;
+    color: @textblack;
+  }
+}
