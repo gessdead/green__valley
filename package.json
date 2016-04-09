@@ -18,5 +18,8 @@
     "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0"
+  },
+  "dependencies": {
+    "gulp-plumber-notifier": "0.0.3"
   }
 }
