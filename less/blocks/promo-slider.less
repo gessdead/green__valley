@@ -7,12 +7,13 @@
     font-size: 14px;
     line-height: 72px;
     
-    li {
+    a {
+      color: @textblack;
       padding: 0 6px;
       transition: 0.3s ease all;
     }
 
-    li:hover {
+    a:hover {
       color: @mainbtn;
       border-bottom: 2px solid @mainbtn;
     }
@@ -22,11 +23,33 @@
   &__item {
     background-image: url(../imgs/promo-slider__bg.png);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding-top: 20px;
+    display: none;
+
+    &.active {
+      display: block;
+    }
 
     @media (min-width: @screen-md) {
       min-height: 430px;
       padding-top: 90px;
+    }
+  }
+
+  &__inner {
+    
+    @media (max-width: 767px) {
+      background-color: @bgcoltext;
+    }
+
+    @media (min-width: @screen-sm) {
+      padding: 0 25px;
+      background-color:;
+      margin-right: auto;
+      margin-left: auto;
+      align-items: center;
     }
   }
 
@@ -36,15 +59,32 @@
     font-size: 18px;
     line-height: 24px;
 
+
     @media (min-width: @screen-sm) {
       font-family: @ptserifcap;
       font-size: 36px;
       line-height: 42px;
       text-align: left;
+
+      span {
+        background-color: @bgcoltext;
+        padding: 0 11px 0 7px;
+      }
     }
   }
 
-  span {
-    background-color: @bgcoltext;
+  &__text {
+    text-align: center;
+
+    @media (min-width: @screen-sm) {
+      text-align: left;
+
+      span {
+        background-color: @bgcoltext;
+        padding: 3px 11px 3px 7px;
+        }
     }
+  }
+
+
 }
