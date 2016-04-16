@@ -2,30 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.min.css">
 </head>
 <body>
 
   <header class="page-header">
-    <div class="page-header__inner">
-      <a href="/" class="site-logo"><img src="" alt="green_valley"></a>
-      <nav class="main-nav">
-        <div class="main-nav__menu-toggler"></div>
+    <div class="page-header__inner row ">
+      <a href="/" class="site-logo col-xs-9 col-md-2"><img src="../imgs/main-logo.png" alt="green_valley"></a>
+      <div class="main-nav__menu-toggler col-xs-1">
+        <a href="" class="menu-toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <nav class="main-nav col-md-4">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="">номера</a></li>
-          <li class="main-nav__item"><a href=""></a>коттедж</li>
-          <li class="main-nav__item"><a href=""></a>ресторан</li>
-          <li class="main-nav__item"><a href=""></a>отдых</li>
-          <li class="main-nav__item"><a href=""></a>контакты</li>
+          <li class="main-nav__item"><a href="" class="link">номера</a></li>
+          <li class="main-nav__item"><a href="" class="link">коттедж</a></li>
+          <li class="main-nav__item"><a href="" class="link">ресторан</a></li>
+          <li class="main-nav__item"><a href="" class="link">отдых</a></li>
+          <li class="main-nav__item"><a href="" class="link">контакты</a></li>
         </ul>
       </nav>
-      <div class="short-contacts">
-        <a href="tel:+78127775588" class="shot-contacts__phone">+7 812 777-55-88</a>
+      <div class="page-header__contacts col-md-4">
+        <a href="tel:+78127775588" class="page-header__phone">+7 812 777-55-88</a>
         <br>
         г. Санкт-Петербург, Приморское ш. 600
       </div>
       <div class="page-header__btn">
-        <a href="" class="btn btn--icon-calendar">забронировать</a>
+        <a href="" class="btn btn--icon-calendar">
+          <i class="fa fa-calendar-o"></i>
+          забронировать
+        </a>
       </div>
     </div>
   </header>
@@ -90,7 +101,7 @@
           </div>
           <div class="recomendations__info">
             <b class="recomendations__text"></b>
-            <p class="price">от <span class="price--style">4500</span></p>
+            <p class="price">от <span class="price--style">4500</span>руб</p>
           </div>
         </div>
       </a>

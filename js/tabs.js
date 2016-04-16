@@ -1,11 +1,10 @@
-var linkHref;
-
 $('.promo-slider__tabs-item a').on('click', function(event) {
-  event.preventDefault();
-  $(this).closest('.promo-slider').find('.promo-slider__item.active').removeClass('active')
-  $(this).closest('.promo-slider__item').addClass('active');
+event.preventDefault();
+var $linkHref = $(this).attr('href');
 
-  $(this).closest('.promo-slider').find('.promo-slider__item.active').removeClass('active');
-  linkHref = $(this).attr('href');
-  $(linkHref).addClass('active');
+$('.promo-slider .promo-slider__item').removeClass('active');
+$('.promo-slider ' + $linkHref).addClass('active');
+
+$('.service-slider .service-slider__list').removeClass('active');
+$('.service-slider ' + $linkHref).addClass('active');
 });

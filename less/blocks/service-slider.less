@@ -22,11 +22,13 @@
 
     &__list {
         display: none;
-
-        @media (min-width: @screen-sm) {
+        
+        &.active {
+          @media (min-width: @screen-sm) {
             display: inline-block;
         }
-    }
+     }
+}
 
     &__title {
         font-size: 26px;
