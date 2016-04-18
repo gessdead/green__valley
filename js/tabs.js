@@ -5,6 +5,9 @@ var $linkHref = $(this).attr('href');
 $('.promo-slider .promo-slider__item').removeClass('active');
 $('.promo-slider ' + $linkHref).addClass('active');
 
+$('.service-slider .service-slider__descr span').removeClass('active');
+$('.service-slider ' + $linkHref).addClass('active');
+
 $('.service-slider .service-slider__list').removeClass('active');
 $('.service-slider ' + $linkHref).addClass('active');
 });

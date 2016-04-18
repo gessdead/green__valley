@@ -45,6 +45,14 @@
     &__descr {
         margin-bottom: 40px;
         padding: 0px 10px 0px 10px;
+
+        span {
+          display: none;
+
+          &.active {
+            display: inline-block;
+          }
+        }
     }
 
     &__item-li {
@@ -60,7 +68,6 @@
         width: 80px;
         margin: 0 30px;
         margin-bottom: 20px;
-        padding-top: 90px;
         position: relative;
     }
 }

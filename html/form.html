@@ -8,28 +8,57 @@
 <body>
 
   <header class="page-header">
-    <div class="page-header__inner">
-      <a href="/" class="site-logo"><img src="" alt="green_valley"></a>
-      <nav class="main-nav">
-        <div class="main-nav__menu-toggler"></div>
+    <div class="page-header__inner row ">
+      <a href="/" class="site-logo col-xs-offset-2 col-xs-8 col-md-2"><img src="../imgs/main-logo.png" alt="green_valley"></a>
+      <div class="main-nav__menu-toggler col-xs-0">
+        <a href="" class="menu-toggler" id="toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <nav class="main-nav col-md-4">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="">номера</a></li>
-          <li class="main-nav__item"><a href=""></a>коттедж</li>
-          <li class="main-nav__item"><a href=""></a>ресторан</li>
-          <li class="main-nav__item"><a href=""></a>отдых</li>
-          <li class="main-nav__item"><a href=""></a>контакты</li>
+          <li class="main-nav__item"><a href="rooms.html" class="link">номера</a></li>
+          <li class="main-nav__item"><a href="single_room.html" class="link">коттедж</a></li>
+          <li class="main-nav__item"><a href="#" class="link">ресторан</a></li>
+          <li class="main-nav__item"><a href="#" class="link">отдых</a></li>
+          <li class="main-nav__item"><a href="#page-footer" class="link">контакты</a></li>
         </ul>
       </nav>
-      <div class="short-contacts">
-        <a href="tel:+78127775588" class="shot-contacts__phone">+7 812 777-55-88</a>
+      <div class="page-header__contacts col-md-4">
+        <a href="tel:+78127775588" class="page-header__phone">+7 812 777-55-88</a>
         <br>
         г. Санкт-Петербург, Приморское ш. 600
       </div>
       <div class="page-header__btn">
-        <a href="" class="btn btn--icon-calendar">забронировать</a>
+        <a href="form.html" class="btn btn--icon-calendar">
+          <i class="fa fa-calendar-o"></i>
+          забронировать
+        </a>
       </div>
     </div>
   </header>
+
+  <nav class="main-nav--hidden" id="hidden">
+    <ul class="main-nav__list--hidden">
+      <li class="main-nav__item--hidden">
+        <a href="rooms.html" class="main-nav__link--hidden link">номера</a>
+      </li>
+      <li class="main-nav__item--hidden">
+        <a href="single_room.html" class="main-nav__link--hidden link">коттедж</a>
+      </li>
+      <li class="main-nav__item--hidden">
+        <a href="#" class="main-nav__link--hidden link">ресторан</a>
+      </li>
+      <li class="main-nav__item--hidden">
+        <a href="#" class="main-nav__link--hidden link">отдых</a>
+      </li>
+      <li class="main-nav__item--hidden">
+        <a href="#page-footer" class="main-nav__link--hidden link">контакты</a>
+      </li>
+    </ul>
+  </nav>
 
   <section class="reserve">
     <div class="reserve__inner">
@@ -218,17 +247,17 @@
   </section>
 
   <footer class="page-footer">
-    <div class="page-footer__inner">
-      <p class="page-footer__adress">г. Санкт-Петербург<br>Приморское ш. 600</p>
-    <div class="page-footer__logo">
-      <a href="/" class="site-logo"><img src="" alt=""></a>
+    <div class="page-footer__inner row">
+      <p class="page-footer__adress col-sm-3">г. Санкт-Петербург<br>Приморское ш. 600</p>
+    <div class="page-footer__logo col-xs-12 col-sm-3">
+      <a href="/" class="col-xs-12"><img src="../imgs/main-logo.png" alt=""></a>
       <ul class="social-icon__list">
-        <li class="social-icon__item"><a href=""><img src=""></a></li>
+        <li class="social-icon__item"><a href=""><i class="fa fa-calendar-o"></i></a></li>
         <li class="social-icon__item"><a href=""><img src=""></a></li>
         <li class="social-icon__item"><a href=""><img src=""></a></li>
       </ul>
     </div>
-      <p class="page-footer__contact">
+      <p class="page-footer__contact col-sm-3">
         <a href="tel:+78127775588">+7 812 777-55-88<br><a href="mailto:info@greenvalley.ru">info@greenvalley.ru</a>
       </p>
     </div>

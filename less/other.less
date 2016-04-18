@@ -18,6 +18,7 @@
 
 .link {
     text-decoration: none;
+    color: @textblack;
     cursor: pointer;
     font-size: 14px;
     line-height: 18px;
@@ -26,10 +27,14 @@
     text-transform: uppercase;
     padding: 0 6px;
     transition: 0.3s ease all;
+
+    &:hover {
+      color: @mainbtn;
+     }
 }
 
 .col-xs-offset-2 {
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-md) {
         margin: 0;
     }
 }

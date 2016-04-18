@@ -1,4 +1,4 @@
-.main-nav{
+.main-nav {
   @media (min-width: @screen-md) {
     display: block;
   }
@@ -11,23 +11,38 @@
       color: @textblack;
     }
 
-    a:hover {
-      color: @mainbtn;
+    // a:hover {
+    //   color: @mainbtn;
+    // }
+
+    &--hidden {
+      list-style: none;
+      text-align: center;
+      margin: 0;
+      padding: 0;
     }
-  
+}
   &__item {
 
+    &--hidden {
+      display: list-item;
+      padding: 14px 0;
+      border-bottom: 1px solid #ebebeb;
+    }
   }
 
   @media (min-width: @screen-md){
       display: flex;
     }
-  }
 
   &__menu-toggler {
       display: inline-block;
       @media (min-width: @screen-md){
       display: none;
     }
+  }
+
+  &--hidden {
+    display: none;
   }
 }
