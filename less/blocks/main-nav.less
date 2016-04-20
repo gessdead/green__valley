@@ -1,4 +1,5 @@
 .main-nav {
+  padding: 0;
   @media (min-width: @screen-md) {
     display: block;
   }
@@ -7,13 +8,17 @@
     list-style-type: none;
     padding: 0px;
 
+    @media (min-width: @screen-md){
+        display: block;
+      }
+
     a {
       color: @textblack;
     }
 
-    // a:hover {
-    //   color: @mainbtn;
-    // }
+    a:hover {
+      color: @mainbtn;
+    }
 
     &--hidden {
       list-style: none;
@@ -31,12 +36,10 @@
     }
   }
 
-  @media (min-width: @screen-md){
-      display: flex;
-    }
 
   &__menu-toggler {
       display: inline-block;
+      
       @media (min-width: @screen-md){
       display: none;
     }
