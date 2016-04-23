@@ -53,7 +53,11 @@
 
     &-item {
       width: 415px;
-      margin: 0 20px;
+      margin: 0 auto;
+
+      @media (min-width: @screen-md) {
+        margin: 0 20px;
+      }
     }
 
     &-title {
@@ -74,7 +78,7 @@
       margin: 5px 0;
 
       span {
-        font-weight: 500;
+        font-weight: 800;
       }
 
       @media (min-width: @screen-md) {

@@ -1,8 +1,8 @@
 .recomendations {
-  //background-color: @secondbtn;
+  background-color:@bggray;
   text-align: center;
   padding: 42px 0;
-  padding-bottom: 37px;
+  padding-bottom: 30px;
   margin-bottom: 0px;
 
   &__inner {
@@ -14,7 +14,7 @@
     align-items: center;
     display: block;
     position: relative;
-    padding: 0 25px;
+    padding: 0 20px;
   }
 
   &__title {
@@ -27,6 +27,7 @@
 
   &__cart {
     background-color: #fff;
+    border: 1px solid #e3e3e3;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
@@ -39,6 +40,13 @@
 
     &:nth-child(even) {
       margin-right: 0;
+    }
+
+    &.hidden {
+      display: none;
+      @media (min-width: @screen-md) {
+        display: inline-block;
+      }
     }
 
     @media (min-width: @screen-sm) {

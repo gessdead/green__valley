@@ -72,4 +72,42 @@ $(document).ready(function(){
       speed: 400,
       dots: true
     });
+
+  //слайдер single room
+  $('.about-room__list').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: false,
+      cssEase: 'ease-in-out',
+      speed: 400,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false
+          }
+        }
+      ]
+    });
+
+  //зумер single room
+  $('.about-room__list-zoom').on('click', function(e){
+      e.preventDefault();
+      var zoomedImg = $(".slick-slide[class*='slick-current']").find('img').attr('src');
+      $('#zoomed-img img').attr('src', zoomedImg);
+      $('#zoomed-img').toggle(400);
+      $('.zoomed-img-wrapper').toggle(100);
+      $('.about-room__list-zoom').toggle(400);
+      $('.slick-arrow').toggle();
+    });
+
+    $('.zoomed-img__unzoom').on('click', function(e){
+      e.preventDefault();
+      $('#zoomed-img').toggle(400);
+      $('.zoomed-img-wrapper').toggle(100);
+      $('.about-room__list-zoom').toggle(400);
+      $('.slick-arrow').toggle();
+    });
 });

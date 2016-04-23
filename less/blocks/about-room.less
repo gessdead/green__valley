@@ -1,0 +1,61 @@
+.about-room {
+  text-align: center;
+  padding-bottom: 40px;
+
+  &__title {
+    line-height: normal;
+    font-family: @ptserifcap;
+    color: @textblack;
+    font-weight: normal;
+    font-size: 26px;
+    margin:20px 0 20px;
+    @media (min-width: @screen-md) {
+      font-size: 30px;
+    }
+  }
+
+  &__inner {
+    padding: 0;
+
+    &--sr {
+      @media (min-width: @screen-md) {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        padding-bottom: 80px;
+      }
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    @media (min-width: @screen-md) {
+      width:50%;
+      margin: 0;
+      height: 400px;
+      position: absolute;
+      top: 0px;
+      right: 20px;
+    }
+
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+
+    img {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 15px;
+  }
+}
