@@ -1,8 +1,6 @@
 .reviews {
   min-height: 530px;
-  padding: 15px 0;
-  padding-top: 35px;
-  padding-bottom: 50px;
+  padding: 50px 0;
   margin-bottom: 45px;
   text-align: center;
   position: relative;
@@ -36,7 +34,7 @@
     font-family: @ptserifcap;
     font-weight: normal;
     color: @textwhite;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 
   &__list {
@@ -59,31 +57,41 @@
       margin-left: 12px;
       margin-right: 12px;
     }
-  }
-  
-  &__item-title-img {
-    width: 80px;
-    height: 80px;
-    overflow: hidden;
-    border: 2px solid @textwhite;
-    margin: 0 auto;
-    margin-top: -25px;
-    margin-bottom: 7px;
 
-    img {
-      width: 100%;
-      height: 100%;
+    &-title-img {
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+      border: 2px solid @textwhite;
+      margin: 0 auto;
+      margin-top: -25px;
+      margin-bottom: 7px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-name {
+      display: inline-block;
+      font-weight: 500;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+
+    &-text {
+      padding: 0 40px;
+    }
+
+    &-text-main {
+      margin: 0;
+    }
+
+    &-text-date {
+      padding: 20px 0 30px;
+      font-size: 14px;
     }
   }
-
-  &__item-name {
-    display: inline-block;
-    font-weight: 500;
-    margin: 0;
-    margin-bottom: 5px;
-  }
-
-  &__item-text-main {
-    margin: 0;
-  }
+  
 }

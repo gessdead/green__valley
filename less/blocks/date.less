@@ -9,28 +9,38 @@
   }
 
   &__inner {
+    padding-bottom: 50px;
+    @media (min-width: @screen-md) {
+      padding-bottom: 100px;
+    }
+  }
+
+  &__choice {
     display: flex;
     flex-direction:column;
     justify-content: center;
-    padding-bottom: 15px;
+    @media (min-width: @screen-sm) {
+      flex-direction: row;
+    }
+    @media (min-width: @screen-md) {
+      background-color: #fff;
+      border: 1px solid #ebebeb;
+      padding: 15px;
+      width: 380px;
+      margin: 0 auto;
+    }
   }
 
   &__arrive {
     font-size: 0;
     display: block;
-    margin-bottom: 35px;
-    label {
-      font-size: 14px;
-      line-height: 18px;
-      font-family: @firasans;
-      font-weight: 300;
-      color: @textblack;
-      text-transform: uppercase;
-      display: inline-block;
-      cursor: pointer;
-      margin-bottom: 15px;
+    padding-bottom: 35px;
+    @media (min-width: @screen-sm) {
+      padding-right:10px;
     }
-
+    @media (min-width: @screen-md) {
+      border-right: 1px solid #ebebeb;
+    }
     input {
       border: 1px solid #ebebeb;
       width: 53px;
@@ -38,13 +48,20 @@
       text-align: center;
       text-transform: uppercase;
       font-family: @firasans;
-
+      color: @secondbtn;
+      @media (min-width: @screen-md) {
+        width: 46px;
+        height: 27px;
+      }
       &:nth-of-type(n + 2) {
         border-left:none;
       }
 
       &:nth-of-type(3) {
         width: 70px;
+        @media (min-width: @screen-md) {
+          width: 50px;
+        }
       }
     }
   }
@@ -52,19 +69,10 @@
   &__return {
     font-size: 0;
     display: block;
-    margin-bottom: 35px;
-    label {
-      font-size: 14px;
-      line-height: 18px;
-      font-family: @firasans;
-      font-weight: 300;
-      color: @textblack;
-      text-transform: uppercase;
-      display: inline-block;
-      cursor: pointer;
-      margin-bottom: 15px;
+    padding-bottom: 35px;
+    @media (min-width: @screen-sm) {
+      padding-left:10px;
     }
-
     input {
       border: 1px solid #ebebeb;
       width: 53px;
@@ -72,6 +80,11 @@
       text-align: center;
       text-transform: uppercase;
       font-family: @firasans;
+      color: @secondbtn;
+      @media (min-width: @screen-md) {
+        width: 46px;
+        height: 27px;
+      }
 
       &:nth-of-type(n + 2) {
         border-left:none;
@@ -79,6 +92,9 @@
 
       &:nth-of-type(3) {
         width: 70px;
+        @media (min-width: @screen-md) {
+          width: 50px;
+        }
       }
     }
   }

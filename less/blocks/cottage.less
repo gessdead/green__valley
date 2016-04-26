@@ -1,0 +1,54 @@
+.cottage {
+  background-color: @bggray;
+  padding-bottom: 50px;
+
+  &__title {
+    font-size: 26px;
+    font-weight: 300;
+    font-family: @ptserifcap;
+    padding-bottom: 30px;
+  }
+
+  &__inner {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    background-color: #fff;
+    padding: 20px 0;
+    @media (min-width: @screen-md) {
+      border: 1px solid #ebebeb;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: @screen-sm) {
+      flex-direction: row;
+    }
+
+  }
+
+  &__item {
+    text-transform: uppercase;
+    @media (min-width: @screen-sm) {
+      width: 25%;
+      padding:40px 0 35px;
+      border-right: 1px solid #ebebeb;
+    }
+    &:last-child {
+      @media (min-width: @screen-sm) {
+        border: none;
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
+
+.cottage-spec {
+  display: none;
+}

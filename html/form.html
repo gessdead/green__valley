@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="../css/style.min.css">
 </head>
@@ -9,7 +10,7 @@
 
   <header class="page-header">
     <div class="page-header__inner row ">
-      <a href="/" class="site-logo col-xs-offset-2 col-xs-8 col-md-2"><img src="../imgs/main-logo.png" alt="green_valley"></a>
+      <a href="index.html" class="site-logo col-xs-offset-2 col-xs-8 col-md-2"><img src="../imgs/main-logo.png" alt="green_valley"></a>
       <div class="main-nav__menu-toggler col-xs-0">
         <a href="" class="menu-toggler" id="toggler">
           <span></span>
@@ -95,12 +96,14 @@
           <ul class="restplace__list choice-block">
             <li class="restplace__item choice-block__item">
               <label for="hotel">
-                <input type="radio"></input>
+                <input type="radio" id="hotel"></input>
+                <span class="restplace__item--hotel">отель</span>
               </label>
             </li>
             <li class="restplace__item choice-block__item">
               <label for="cottage">
-                 <input type="radio"></input>
+                 <input type="radio" id="cottage"></input>
+                 <span class="restplace__item--cottage">коттедж</span>
               </label>
             </li>
           </ul>
@@ -110,12 +113,13 @@
       <!--cottage type-->
       <div class="cottage">
         <p class="step">шаг 3</p>
-        <h2 class="cottage__title"></h2>
-        <div class="cottage__inner"></div>
+        <h2 class="cottage__title">Тип коттеджа</h2>
+        <div class="cottage__inner">
           <ul class="cottage__list">
-            <li class="cottage__item">
+            <li class="cottage__item choice-block__item">
               <label for="cottage__one">
                 <input type="radio"></input>
+                <span class="cottage__item--text choice-block__item--text">флагман</span>
               </label>
               <div class="cottage-spec">
                 <ul class="cottage-spec__list">
@@ -127,9 +131,10 @@
                 </ul>
               </div>
             </li>
-            <li class="cottage__item">
+            <li class="cottage__item choice-block__item">
               <label for="cottage__two">
                 <input type="radio"></input>
+                <span class="cottage__item--text choice-block__item--text">озёрный</span>
               </label>
               <div class="cottage-spec">
                 <ul class="cottage-spec__list">
@@ -141,9 +146,10 @@
                 </ul>
               </div>
             </li>
-            <li class="cottage__item">
+            <li class="cottage__item choice-block__item">
               <label for="cottage__three">
                 <input type="radio"></input>
+                <span class="cottage__item--text choice-block__item--text">портовый</span>
               </label>
               <div class="cottage-spec">
                 <ul class="cottage-spec__list">
@@ -155,9 +161,10 @@
                 </ul>
               </div>
             </li>
-            <li class="cottage__item">
+            <li class="cottage__item choice-block__item">
               <label for="cottage__four">
                 <input type="radio"></input>
+                <span class="cottage__item--text choice-block__item--text">ольховка</span>
               </label>
               <div class="cottage-spec">
                 <ul class="cottage-spec__list">
@@ -170,24 +177,25 @@
               </div>
             </li>
           </ul>
+        </div>
       </div>
       <!--personal information-->
       <div class="personal-info">
         <p class="step">шаг 4</p>
         <h2 class="personal-info__title">Персональная информация</h2>
-        <div class="personal-info__form">
-          <div class="personal-info__form-inner">
-            <input type="text">
+        <div class="personal-info__form choice-block">
+          <div class="personal-info__form-inner choice-block__item">
+            <input type="text" placeholder="имя">
           </div>
-          <div class="personal-info__form-inner">
-            <input type="text">
+          <div class="personal-info__form-inner choice-block__item">
+            <input type="text" placeholder="фамилия">
           </div>
-          <div class="personal-info__form-inner">
-            <input type="number" name="phoneNumber">
+          <div class="personal-info__form-inner choice-block__item">
+            <input type="number" name="phoneNumber" placeholder="номер телефона">
             <label for="phoneNumber">Мы свяжемся с вами в случае необходимости.</label>
           </div>
-          <div class="personal-info__form-inner">
-            <input type="text">
+          <div class="personal-info__form-inner choice-block__item">
+            <input type="text" placeholder="e-mail">
             <label for="email">На этот адрес мы вышлем вам подтверждение о забронированном номере.</label>
           </div>
         </div>
@@ -198,24 +206,24 @@
         <p class="step">шаг 5</p>
         <h2 class="payment__title">Способ оплаты</h2>
         <div class="payment__form">
-          <div class="type-of-payment">
-            <div class="payment-on-place">
-              <div class="payment-on-place__explanation">
+          <div class="payment__type">
+            <div class="payment__on-place">
+              <div class="payment__on-place-item">
                 <label for="payment-on-place">
-                  <input type="radio" name="type-of-payment">
-                  <span class="payment-on-place__choose">по приезду</span>
+                  <input type="radio" name="payment__type">
+                  <span class="payment__on-place-choice">по приезду</span>
                 </label>
               </div>
             </div>
-            <div class="payment-online">
-              <div class="payment-online__explanation">
-                <label for="payment-online">
-                  <input type="radio" name="type-of-payment">
-                  <span class="payment-online__choose">сейчас</span>
+            <div class="payment__online">
+              <div class="payment__online-item">
+                <label for="payment__online">
+                  <input type="radio" name="payment__type">
+                  <span class="payment__online-choice">сейчас</span>
                 </label>
               </div>
-              <div class="payment-online__form">
-                <div class="payment-online__form-col1">
+              <div class="payment__online-form">
+                <div class="payment__online-form-col1">
                   <label for="cardNumber">номер карты</label>
                   <input type="text" name="cardNumber" placeholder="0000 0000 0000 0000">
                   <span class="personal-info__success"></span>
@@ -223,7 +231,7 @@
                   <input type="text" name="ownerLastName" placeholder="vladimir vladimirovich">
                   <span class="personal-info__success"></span>
                 </div>
-                <div class="payment-online__form-col2">
+                <div class="payment__online-form-col2">
                   <label for="cvv">код cvv</label>
                   <input type="number" name="cvv" placeholder="123" maxlength="3">
                   <span class="personal-info__success"></span>
@@ -264,5 +272,6 @@
   </footer>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript" src="../js/menu-toggler.js"></script>
+  <script type="text/javascript" src="../js/placeholder_disable.js"></script>
 </body>
 </html>
