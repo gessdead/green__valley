@@ -67,7 +67,7 @@
       <p class="reserve__descr">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <span>+7 812 777-55-88</span></p>
       
       <!--choice date block-->
-      <div class="date">
+      <div class="date" id="date">
         <p class="step">шаг 1</p>
         <h2 class="date__title">Дата отдыха</h2>
         <div class="date__inner">
@@ -89,14 +89,14 @@
       </div>
 
       <!--restplace block-->
-      <div class="restplace">
+      <div class="restplace" id="restplace">
         <p class="step">шаг 2</p>
         <h2 class="restplace__title">Место проживания</h2>
         <div class="restplace__inner">
           <ul class="restplace__list choice-block">
             <li class="restplace__item choice-block__item">
               <label for="hotel">
-                <input type="radio" id="hotel"></input>
+                <input type="radio" id="hotel" checked="checked"></input>
                 <span class="restplace__item--hotel">отель</span>
               </label>
             </li>
@@ -111,7 +111,7 @@
       </div>
 
       <!--cottage type-->
-      <div class="cottage">
+      <div class="cottage" id="cottage">
         <p class="step">шаг 3</p>
         <h2 class="cottage__title">Тип коттеджа</h2>
         <div class="cottage__inner">
@@ -123,11 +123,11 @@
               </label>
               <div class="cottage-spec">
                 <ul class="cottage-spec__list">
-                  <li class="cottage-spec__item"></li>
-                  <li class="cottage-spec__item"></li>
-                  <li class="cottage-spec__item"></li>
-                  <li class="cottage-spec__item"></li>
-                  <li class="cottage-spec__item"></li>
+                  <li class="cottage-spec__item">площадь 100м<sup>2</sup></li>
+                  <li class="cottage-spec__item">3 комнаты</li>
+                  <li class="cottage-spec__item">5 спальных мест</li>
+                  <li class="cottage-spec__item">раздельный санузел</li>
+                  <li class="cottage-spec__item">WI-FI</li>
                 </ul>
               </div>
             </li>
@@ -210,8 +210,9 @@
             <div class="payment__on-place">
               <div class="payment__on-place-item">
                 <label for="payment-on-place">
-                  <input type="radio" name="payment__type">
+                  <input type="radio" name="payment__type" checked="checked">
                   <span class="payment__on-place-choice">по приезду</span>
+                  <p class="payment__on-place-descr">Вы можете произвести оплату по факту заселения.</p>
                 </label>
               </div>
             </div>
@@ -220,6 +221,7 @@
                 <label for="payment__online">
                   <input type="radio" name="payment__type">
                   <span class="payment__online-choice">сейчас</span>
+                  <p class="payment__online-descr">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
                 </label>
               </div>
               <div class="payment__online-form">
@@ -241,14 +243,14 @@
               </div>
             </div>
           </div>
-          <div class="sum-of-payment">
+          <div class="sum-for-payment">
             <p class="sum-for-payment__title">к оплате</p>
             <p class="sum-for-payment__sum"></p>
-            <p class="sum-for-pyment__warning">Пожалуйста, <span class="dotted-underline">выберите дату</span> въезда и выезда чтобы увидеть сумму к оплате </p>
+            <p class="sum-for-pyment__warning"></p>
           </div>
         </div>
         <div class="payment__btn">
-          <button class="btn">Забронировать</button>
+          <input type="button" value="забронировать" onclick="check(this.form)" class="btn btn--green" id="submit">  
         </div>
       </div>
     </div>
@@ -273,5 +275,6 @@
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript" src="../js/menu-toggler.js"></script>
   <script type="text/javascript" src="../js/placeholder_disable.js"></script>
+  <script type="text/javascript" src="../js/form-validator.js"></script>
 </body>
 </html>

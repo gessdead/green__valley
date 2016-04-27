@@ -32,6 +32,7 @@
 
   &__item {
     text-transform: uppercase;
+    padding-bottom: 10px;
     @media (min-width: @screen-sm) {
       width: 25%;
       padding:40px 0 35px;
@@ -42,7 +43,6 @@
         border: none;
       }
     }
-
     input {
       display: none;
     }
@@ -51,4 +51,33 @@
 
 .cottage-spec {
   display: none;
+  position: absolute;
+  bottom: -205px;
+  left: 0;
+  border: 1px solid #ebebeb;
+  background-color: #fff;
+  padding: 23px 0;
+  padding-bottom: 13px;
+  &__list {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+  }
+  &__item {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: @firasans;
+    font-weight: 300;
+    color: @textblack;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    padding-top: 55px;
+    width: 14%;
+    vertical-align: top;
+  }
 }

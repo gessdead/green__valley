@@ -17,12 +17,22 @@
   outline: none;
   transition: ease-in-out all 400ms;
   text-transform: uppercase;
-
+  &:hover {
+    background-color: @mainbtndrkn;
+    text-decoration: none;
+    color: #fff;
+  }
+  &--green {
+    background-color: #0ab89d;
+    padding: 17px 0;
+    border-radius: 0;
+    width: 100%;
     &:hover {
-      background-color: @mainbtndrkn;
+      background-color: @secondbtndrkn;
       text-decoration: none;
       color: #fff;
     }
+  }
 }
 
 .btn--icon-calendar {

@@ -163,9 +163,6 @@
       padding: 16px;
       text-align: center;
       background-color: @textwhite;
-      @media (min-width: @screen-md) {
-        padding: 0;
-      }
     }
 
     &--text {
@@ -178,8 +175,8 @@
         display: none;
         left: -30px;
         top: 0;
-        width: 16px;
-        height: 10px;
+        width: 12px;
+        height: 6px;
         border-bottom: 4px solid @secondbtn;
         border-left: 4px solid @secondbtn;
         transform: rotate(-45deg);
@@ -205,4 +202,10 @@ input:checked + .choice-block__item--text:before {
 }
 input:checked + .choice-block__item--text {
   color: @textblack;
+}
+input:checked + .payment__on-place-choice:before {
+  border-color: @secondbtn;
+}
+input:checked + .payment__online-choice:before {
+  border-color: @secondbtn;
 }

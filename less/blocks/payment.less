@@ -6,20 +6,136 @@
     font-family: @ptserifcap;
     padding-bottom: 30px;
   }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: @screen-sm) {
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+  }
+  &__type {
+    @media (min-width: @screen-sm) {
+      margin-left: 20px;
+      max-width: 480px;
+    }
+  }
   &__on-place {
     background-color: #fff;
     border-top: 1px solid #ebebeb;
     border-bottom: 1px solid #ebebeb;
-    padding: 20px 40px;
+    padding: 20px 20px;
     margin-bottom: 20px;
+    text-align: left;
+    input {
+      display: none;
+    }
+    label {
+      display: flex;
+    }
+    @media (min-width: @screen-sm) {
+      border: 1px solid #ebebeb;
+    }
+    &-choice {
+      font-size: 14px;
+      line-height: 18px;
+      font-family: @firasans;
+      color: @textblack;
+      text-transform: uppercase;
+      font-weight: 500;
+      position: relative;
+      cursor: pointer;
+      padding-left: 40px;
+      margin-right: 20px;
+      min-width: 85px;
+      &:before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: 3px;
+        top: 0;
+        width: 12px;
+        height: 6px;
+        border-bottom: 4px solid #ebebeb;
+        border-left: 4px solid #ebebeb;
+        transform: rotate(-45deg);
+      }
+    }
+    &-descr {
+      display: none;
+      max-width: 220px;
+      @media (min-width: @screen-sm) {
+        display: inline-block;
+        font-size: 14px;
+      }
+    }
   }
   &__online {
     background-color: #fff;
     border-top: 1px solid #ebebeb;
     border-bottom: 1px solid #ebebeb;
-    padding: 20px 40px;
+    padding: 20px 20px;
     margin-bottom: 20px;
+    text-align: left;
+    @media (min-width: @screen-sm) {
+      border: 1px solid #ebebeb;
+      margin-bottom: 50px;
+    }
+    input:nth-child(1) {
+      display: none;
+    }
+    label {
+      display: flex;
+    }
+    &-item {
+      padding-bottom: 20px;
+    }
+    &-choice {
+      font-size: 14px;
+      line-height: 18px;
+      font-family: @firasans;
+      color: @textblack;
+      text-transform: uppercase;
+      font-weight: 500;
+      position: relative;
+      cursor: pointer;
+      padding-left: 40px;
+      margin-right: 50px;
+      &:before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: 3px;
+        top: 0;
+        width: 12px;
+        height: 6px;
+        border-bottom: 4px solid #ebebeb;
+        border-left: 4px solid #ebebeb;
+        transform: rotate(-45deg);
+      }
+    }
+    &-descr {
+      display: none;
+      @media (min-width: @screen-sm) {
+        display: inline-block;
+        font-size: 14px;
+      }
+    }
     &-form{
+      text-transform: uppercase;
+      @media (min-width: @screen-sm) {
+        display: flex;
+      }
+      &-col1 {
+        @media (min-width: @screen-sm) {
+          margin-right:10px;
+        }
+      }
+      &-col2 {
+        @media (min-width: @screen-sm) {
+          margin-left:10px;
+        }
+      }
       input {
         outline: none;
         border: none;
@@ -37,5 +153,34 @@
         margin-bottom: 20px;
       }
     }
+  }
+  &__btn {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+}
+
+.sum-for-payment {
+  width: 100%;
+  display: inline-block;
+  background-color: #fff;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding-top: 20px;
+  min-height: 165px;
+  margin-bottom: 50px;
+  @media (min-width: @screen-sm) {
+    max-width: 300px;
+    border: 1px solid #ebebeb;
+  }
+  &__title {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: @firasans;
+    font-weight: 300;
+    color: @textblack;
+    text-transform: uppercase;
+    margin-bottom: 10px;
   }
 }
