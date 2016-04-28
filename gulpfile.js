@@ -9,7 +9,18 @@ const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
 const cleanss = require('gulp-cleancss');
 const sourcemaps = require('gulp-sourcemaps');
+const htmlhint = require('gulp-htmlhint');
 
+
+//проверка html кода
+gulp.task('htmlhint', function() {
+  return gulp.src('./html/*.html')
+    .pipe(plumberNotifier())
+    .pipe(htmlhint({
+      "tag-pair": true,
+      }))
+    .pipe(htmlhint.reporter());
+});
 // Компиляция LESS
 gulp.task('less', function () {
   return gulp.src('./less/style.less')
@@ -26,7 +37,7 @@ gulp.task('less', function () {
     .pipe(gulp.dest('./css'));
 });
 
-// Вотчер за компиляцией LESS
+// Вотчер 
 gulp.task('watch', function() {
     gulp.watch('less/**/*.less', ['less']);
     });
