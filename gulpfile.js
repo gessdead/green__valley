@@ -36,19 +36,19 @@ gulp.task('less', function () {
 });
 
 //собиратель в билд
-gulp.task('bild', function(){
+gulp.task('build', function(){
   gulp.src('./src/css/*.css')
     .pipe(cleanss())
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('./bild/css'));
+    .pipe(gulp.dest('./build/css'));
   gulp.src('./src/html/*.html')
-    .pipe(gulp.dest('./bild/html'));
+    .pipe(gulp.dest('./build/html'));
   gulp.src('./src/imgs/**/*.*')
-    .pipe(gulp.dest('./bild/imgs'));
+    .pipe(gulp.dest('./build/imgs'));
   gulp.src('./src/js/*.js')
-    .pipe(gulp.dest('./bild/js'));
+    .pipe(gulp.dest('./build/js'));
   gulp.src('./src/svg/*.svg')
-    .pipe(gulp.dest('./bild/svg'));
+    .pipe(gulp.dest('./build/svg'));
   });
 
 //поднятие сервера
