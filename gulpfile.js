@@ -10,12 +10,12 @@ const mqpacker = require('css-mqpacker');
 const cleanss = require('gulp-cleancss');
 const sourcemaps = require('gulp-sourcemaps');
 const htmlhint = require('gulp-htmlhint');
-
+const livereload = require('gulp-livereload');
+const connect = require('gulp-connect');
 
 //проверка html кода
 gulp.task('htmlhint', function() {
   return gulp.src('./src/html/*.html')
-    .pipe(plumberNotifier())
     .pipe(htmlhint({
       "tag-pair": true,
       }))
@@ -25,16 +25,14 @@ gulp.task('htmlhint', function() {
 gulp.task('less', function () {
   return gulp.src('./src/less/style.less')
     .pipe(plumberNotifier())
-    //.pipe(sourcemaps.init())
     .pipe(less())
     .pipe(postcss([
         autoprefixer({browsers: ['last 2 version']}),
         mqpacker
     ]))
-    //.pipe(sourcemaps.write())
-    //.pipe(cleanss())
-    .pipe(rename('style.css'))
-    .pipe(gulp.dest('./src/css'));
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('./src/css'))
+    //.pipe(livereload());
 });
 
 //собиратель в билд
@@ -53,7 +51,15 @@ gulp.task('bild', function(){
     .pipe(gulp.dest('./bild/svg'));
   });
 
+//поднятие сервера
+gulp.task('connect', function() {
+  connect.server({
+    //root: 'src/html',
+    livereload: true
+    });
+});
+
 // Вотчер 
-gulp.task('watch', function() {
-    gulp.watch('/src/less/**/*.less', ['less']);
+gulp.task('watch', ['connect'], function() {
+    gulp.watch('src/less/**/*.less', ['less']);
     });
