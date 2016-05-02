@@ -1,6 +1,1 @@
-$(document).ready(function(){
-  $('#toggler').on('click', function(e){
-    e.preventDefault();
-    $('#hidden').slideToggle('slow');
-  });
-});
+$(document).ready(function(){$("#toggler").on("click",function(e){e.preventDefault(),$("#hidden").slideToggle("slow")})});

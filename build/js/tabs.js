@@ -1,13 +1,1 @@
-$('.promo-slider__tabs-item a').on('click', function(event) {
-event.preventDefault();
-var $linkHref = $(this).attr('href');
-
-$('.promo-slider .promo-slider__item').removeClass('active');
-$('.promo-slider ' + $linkHref).addClass('active');
-
-$('.service-slider .service-slider__descr span').removeClass('active');
-$('.service-slider ' + $linkHref).addClass('active');
-
-$('.service-slider .service-slider__list').removeClass('active');
-$('.service-slider ' + $linkHref).addClass('active');
-});
+$(".promo-slider__tabs-item a").on("click",function(e){e.preventDefault();var s=$(this).attr("href");$(".promo-slider .promo-slider__item").removeClass("active"),$(".promo-slider "+s).addClass("active"),$(".service-slider .service-slider__descr span").removeClass("active"),$(".service-slider "+s).addClass("active"),$(".service-slider .service-slider__list").removeClass("active"),$(".service-slider "+s).addClass("active")});

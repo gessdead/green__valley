@@ -12,6 +12,9 @@ const sourcemaps = require('gulp-sourcemaps');
 const htmlhint = require('gulp-htmlhint');
 const livereload = require('gulp-livereload');
 const connect = require('gulp-connect');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const jsmin = require('gulp-jsmin');
 
 //проверка html кода
 gulp.task('htmlhint', function() {
@@ -34,6 +37,14 @@ gulp.task('less', function () {
     .pipe(gulp.dest('./src/css'))
     //.pipe(livereload());
 });
+//склейка и минификакия скриптов
+//gulp.task('script', function(){
+//  return gulp.src('./src/js/*.js')
+//    .pipe(concat('all.js'))
+//    .pipe(jsmin())
+//    .pipe(rename('all.min.js'))
+//    .pipe(gulp.dest('./src/js'));
+//  });
 
 //собиратель в билд
 gulp.task('build', function(){
@@ -46,6 +57,7 @@ gulp.task('build', function(){
   gulp.src('./src/imgs/**/*.*')
     .pipe(gulp.dest('./build/imgs'));
   gulp.src('./src/js/*.js')
+    .pipe(uglify())
     .pipe(gulp.dest('./build/js'));
   gulp.src('./src/svg/*.svg')
     .pipe(gulp.dest('./build/svg'));
