@@ -527,6 +527,7 @@ input:checked + .payment__online-choice:before {
   margin-bottom: -15px;
   margin-top: 25px;
   padding: 0;
+  outline: none;
 }
 .reviews__item {
   width: 100%;
